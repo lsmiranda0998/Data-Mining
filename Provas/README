@@ -1,1 +1,57 @@
 Provas avaliativas feitas durante a disciplina.
+
+Prova 1
+
+Mineração de Dados
+
+Instruções:
+
+- Prova com consulta, duração 120 minutos.
+- Submeta as respostas às questões como um documento PDF.
+
+
+1. A independência entre os atributos de uma base de dados é um requisito fundamental para a aplicação de várias técnicas de mineração de dados. Entretanto, nem sempre é possível alcançar essa independência, por exemplo usando métodos de redução de dimensionalidade como PCA e SVD, sem que haja uma perda significativa de informação. Métodos kernel, por outro lado, promovem um aumento na dimensionalidade, frequentemente recorrendo a mapeamentos não lineares. Discuta quais critérios e princípios utilizar para construir estratégias que considerem ambas as direções, nominalmente métodos kernel e estratégias de redução de dimensionalidade, na preparação de dados previamente à aplicação de técnicas. Apresente exemplos, mesmo que hipotéticos, considerando características dos dados, das técnicas e das tarefas a serem realizadas.
+
+2. Você é cientista de dados de uma empresa de auditoria e tem por tarefa identificar comportamentos anômalos de funcionários de uma instituição financeira ao longo do tempo. Você tem informações sobre a natureza e magnitude das atividades, assim como o momento que elas ocorreram, os funcionários envolvidos e, se for o caso, entidades externas. Discuta como você poderia utilizar técnicas de mineração de padrões frequentes, sejam eles conjuntos, sequências ou grafos. Explicite os padrões de interesse à luz do seu entendimento dos dados mencionados como disponíveis e métricas de interesse a serem utilizadas na análise demandada para priorizar os padrões mais relevantes.
+
+3. Algoritmos de mineração de grafos são um desafio tanto do ponto de vista de modelagem, que pode ser muito variada, quanto do ponto de vista computacional, tendo em vista a explosão combinatória em termos de padrões minerados. Discuta como você estenderia o algoritmo GSpan para minerar subgrafos maximais, ou seja, subgrafos que sejam os maiores possíveis entre os subgrafos frequentes. Quais operações do gSpan continuariam a ser realizadas e quais teriam que ser alteradas tendo em vista o novo padrão a ser minerado? Com relação à complexidade computacional do algoritmo proposto, ela seria maior, menor ou não se alteraria? Por que?
+
+4. Algoritmos baseados em representantes (k-means e EM) e baseados em densidade (DBSCAN e DenClue) têm dificuldades em lidar com agrupamentos de densidade variável. Algoritmos hierárquicos lidam melhor com essa variação de densidade e o algoritmo MST pode ser visto como uma extensão hierárquica do k-means. Considerando algoritmos espectrais e baseados em grafos, você considera que eles são capazes de lidar com variação de densidade nos agrupamentos inerentes aos dados? Se sim, justifique a sua resposta, se não, discuta como os algoritmos espectrais e baseados em grafos podem ser estendidos para lidar melhor com densidade variável nos agrupamentos nativos.
+
+5. A avaliação da qualidade de agrupamentos, em geral, se baseia nas noções de similaridade intra e inter agrupamento. Antes de realizar o agrupamento, entretanto, é importante saber o quanto os dados são agrupáveis, o que é conhecido como tendência de agrupamento. Estratégias tradicionais de avaliação de tendência de agrupamento se baseiam em contrastar os dados com distribuições aleatórias, o que é necessário, mas não suficiente para garantir que haja agrupamentos com diferenças significativas entre as similaridades intra e inter agrupamento. Proponha uma estratégia de avaliação de tendência de agrupamento baseada em execuções sobre amostras da base de dados e sementes aleatórias para técnicas como k-means e EM. Em particular descreva como você pode utilizar os resultados das várias execuções para avaliar a tendência de agrupamentos.
+
+6. Padrões frequentes e agrupamentos são modelos ditos descritivos, pois buscam explicitar propriedades entre as entidades representadas nos dados de entrada. Considerando os algoritmos ECLAT e EM, é possível usar mineração de padrões frequentes para subsidiar a criação de métricas de similaridade para fins de agrupamento? Se sim, descreva como, se não, explique porque não acredita ser possível.
+
+
+Prova 2
+
+Mineração de Dados
+
+Instruções:
+
+- Prova com consulta, duração 150 minutos.
+- Submeta as respostas às questões como um documento PDF.
+
+Questão 1
+
+Uma questão determinante na qualidade de modelos de classificação é o quanto a base de treinamento é balanceada, ou seja, se o espaço de ocorrência das entidades a serem classificadas é adequadamente amostrado. Considerando as árvores de decisão, discuta o quanto ela é robusta a esse tipo de problema. Se ela for robusta, justifique a sua resposta, caso contrário, indique como o problema pode ser minimizado.
+
+Questão 2
+
+Modelos de classificação são severamente afetados pela ocorrência de paradoxos na base de dados de treinamento, ou seja, os mesmos atributos levam a classes diferentes.  Considerando a técnica "stacking", discuta se, e como, essas técnicas minimizam os problemas causados por paradoxos, ou explique porque não tratam.
+
+Questão 3
+
+Randomização é uma estratégia popular em mineração de dados, em geral permitindo reduzir o viés de modelos de classificação e regressão. Considerando dois casos em particular, as árvores de decisão aleatórias e dropout em redes neuronais profundas, explique como a randomização associada a cada uma delas auxilia em obter modelos melhores.
+
+Questão 4
+
+A utilização de kernels no contexto de técnicas baseadas em álgebra linear como o SVM é uma estratégia consagrada. A despeito do kernel utilizado, as características do SVM como tolerância a ruídos se mantem. Discuta como exceções e ruídos podem ser tratados no contexto de SVM+kernels e como a calibração dos algoritmos (por exemplo a constante C) pode levar em consideração o kernel utilizado.
+
+Questão 5
+
+A utilização de redes neuronais de múltiplos níveis foi limitada por muito tempo em razão da impossibilidade de controlar a magnitude do gradiente, tanto do ponto de vista de crescer quanto reduzir muito rápido, que é conhecido como o problema do "vanishing/exploding gradient". Explique o que é esse problema em termos da impossibilidade desse controle e descreva as estratégias que foram adotadas para minimizar o problema e viabilizar as redes neurais profundas.
+
+Questão 6
+
+Regularização é uma estratégia popular de simplificar modelos e aumentar a sua robustez. Durante o curso vimos regularizações L1 e L2 em mais de um cenário. Suponha que você tem que avaliar, qualitativa e quantitativamente, a utilização de uma regularização L3, ou seja, a função objetivo da regressão, linear ou logística, contempla a norma elevado ao cubo. Discuta a efetividade e os resultados da regularização L3, em contraponto às regularizações L1 e L2.
